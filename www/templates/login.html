@@ -1,0 +1,20 @@
+<ion-view title="Login" id="loginpage" hide-nav-bar="true">
+    <ion-content padding="true" overflow-scroll="false">
+        <div class="spacer" style="width: 283px; height: 76px;"></div>
+        <form class="list" name="login_form">
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">Username</span>
+                    <input type="text" name="username" ng-model="val.loginData.username" required>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" name="password" ng-model="val.loginData.password" required>
+                </label>
+            </ion-list>
+            <div class="spacer" style="height: 40px;"></div>
+            <button id="login-btn" class="button button-balanced  button-block" ng-disabled="login_form.$invalid" ng-click="exe.doLogin()">Log in</button>
+            <a class="button button-positive  button-block button-clear" ng-click="exe.gotoSignup()">Or create an account</a>
+        </form>
+    </ion-content>
+</ion-view>

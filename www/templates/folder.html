@@ -1,0 +1,23 @@
+<ion-view title="Page" id="folderlistpage" hide-nav-bar="true">
+    <div class="bar bar-header">
+      <button class="button button-icon icon ion-folder parent-btn ion-left" ng-click="exe.gotoParent()" ng-hide="val.parent==0" ng-disabled="val.parent==0"><span>..</span></button>      
+	  <button class="button button-icon icon ion-android-menu" ng-click="exe.showActionSheet()"></button>	  
+	</div>
+    <ion-content padding="true" class="has-header">
+        <div class="list card folders">
+		  <a class="item item-icon-left" ng-repeat="folder in folders = (data.folders | filter : exe.filterFolders())" ng-click="exe.showDirectory(folder.id)">
+		    <i class="icon ion-folder folder"></i>
+		    {{folder.foldername}}
+		  </a>
+		  <a class="item item-icon-left" ng-repeat="file in files = ( data.files | filter : exe.filterFiles())" ng-click="exe.onCast(file)">
+		    <i class="icon ion-ios-play"></i>
+		    {{file.filename}}
+		  </a>
+		  <div class="empty-screen" ng-if="folders.length==0&&files.length==0">
+			<img src="img/upload.png" width="200px"/>
+		  </div>
+		</div>
+		<ion-infinite-scroll ng-if="(val.moreFolder || val.moreFile) && ( (folders.length + files.length ) >= 11)" on-infinite="exe.loadMoreData()">
+        </ion-infinite-scroll>		
+    </ion-content>
+</ion-view>

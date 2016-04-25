@@ -1,0 +1,123 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+#folderlistpage{
+	.plsu-btn{
+		float:right;
+		position:absolute;
+		top:5px;
+		bottom:5px;
+		right:42px;
+	}
+	.profile-btn{
+		float:right;
+	}
+	.parent-btn{
+		float:left;
+		color:#ffbb33;
+
+		span{
+		  color:black;
+		}
+	}
+
+	.folders{
+		.folder{
+			color:#ffbb33;
+		}
+	}
+}
+
+#sfolderlistpage{
+	.parent-btn{
+		float:left;
+		color:yellow;
+
+		span{
+		  color:black;
+		}
+	}
+
+	.folders{
+		.folder{
+			color:#ffbb33;
+		}
+	}
+}
+
+.platform-android{
+	.CustomActionSheet{ 
+		.action-sheet-options{
+			margin: 0 5px !important;
+			margin-bottom:5px !important;
+			background-color:transparent !important;
+
+			button{
+				color:#0c60ee !important;
+				text-align:center !important;
+				font-size:20px !important;
+				background-color:white !important;
+				margin:2px 0 !important;
+			}
+		}	
+	}
+}
+
+.logout-btn{
+	color: #e42112;
+}
+
+#profilepage{
+	.item-toggle{
+		border-left: none !important;
+		border-right: none !important;
+		border-bottom: none !important;
+		text-align:right;
+		padding-right:75px;
+	}
+}
+
+.empty-screen{
+	text-align:center;
+	opacity:0.4;
+	padding-top:80px;
+	padding-bottom:80px;
+}
+
+#searchpage{
+	ion-content{
+		margin-top: 45px !important;
+
+		.folders{
+			.folder{
+				color:#ffbb33;
+			}
+		}
+	}
+
+	.bar{
+		padding-left:0 !important;
+		padding-top:0 !important;
+		padding-bottom:0 !important;
+	}
+}

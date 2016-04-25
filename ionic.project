@@ -1,0 +1,12 @@
+{
+  "name": "castapp",
+  "app_id": "4489491c",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}
